@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="College Enquiry Chatbot - find admissions, courses, fees and campus information.">
+  <title>CampusConnect | College Enquiry Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="CampusConnect home"><span class="brand-mark">C</span><span>Campus<span class="brand-accent">Connect</span></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#enquiry">Submit Enquiry</a>
+      <a class="nav-link" href="#chatbot">Ask Chatbot</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="pulse"></span> YOUR CAMPUS, YOUR FUTURE</span>
+        <h1>Your college journey<br>starts <span>right here.</span></h1>
+        <p>Explore programmes, understand admissions, discover campus life, and get answers to your college questions in one friendly place.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#chatbot">Ask a question <span>↗</span></a>
+          <a class="btn btn-light" href="#enquiry">Submit an enquiry</a>
+        </div>
+        <div class="hero-note"><span class="avatar-stack"><i>🎓</i><i>💬</i><i>✨</i></span><span>Quick answers for curious students</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a college campus">
+        <div class="sun"></div><div class="art-card card-top"><span>✦</span> Your next chapter</div>
+        <div class="campus-building"><div class="roof"></div><div class="building-body"><div class="college-sign">CAMPUS<br><small>UNIVERSITY</small></div><div class="windows"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="door"></div></div><div class="steps"></div></div>
+        <div class="tree tree-left"><i></i><b></b></div><div class="tree tree-right"><i></i><b></b></div>
+        <div class="art-card card-bottom"><span class="card-icon">✓</span><div><strong>One place for answers</strong><small>Admissions · Courses · Campus</small></div></div>
+        <div class="ground"></div>
+      </div>
+    </section>
+
+    <section class="section explore" id="explore">
+      <div class="section-heading"><div><span class="eyebrow">EXPLORE CAMPUSCONNECT</span><h2>Everything you need to know</h2></div><p>Start with the essentials. Select a topic to see useful information.</p></div>
+      <div class="topic-grid">
+        <article class="topic-card topic-admissions"><div class="topic-icon">📝</div><span class="topic-number">01 / ADMISSIONS</span><h3>Make your next move</h3><p>Learn about the application process and documents to prepare.</p><button class="text-link topic-question" data-question="What is the admission process?">Explore admissions <span>↗</span></button></article>
+        <article class="topic-card topic-courses"><div class="topic-icon">📚</div><span class="topic-number">02 / COURSES</span><h3>Find your field</h3><p>Explore popular engineering branches and programme details.</p><button class="text-link topic-question" data-question="What courses are available?">Explore courses <span>↗</span></button></article>
+        <article class="topic-card topic-fees"><div class="topic-icon">💜</div><span class="topic-number">03 / FEES & SCHOLARSHIPS</span><h3>Plan with confidence</h3><p>Understand fee information and where to ask about scholarships.</p><button class="text-link topic-question" data-question="Tell me about fees and scholarships.">Explore fees <span>↗</span></button></article>
+        <article class="topic-card topic-campus"><div class="topic-icon">🌿</div><span class="topic-number">04 / CAMPUS FACILITIES</span><h3>Picture campus life</h3><p>Discover common facilities and student support services.</p><button class="text-link topic-question" data-question="What campus facilities are available?">Explore facilities <span>↗</span></button></article>
+      </div>
+    </section>
+
+    <section class="chat-section" id="chatbot">
+      <div class="chat-intro"><span class="eyebrow">CAMPUSCONNECT ASSISTANT</span><h2>Curious about college?<br><span>Just ask.</span></h2><p>Ask about admissions, courses, fees, scholarships, or campus facilities. The demo assistant uses a built-in FAQ, so it works without a paid AI service.</p><div class="chat-points"><span>✓ Friendly answers</span><span>✓ Available anytime</span><span>✓ Easy to use</span></div></div>
+      <div class="chat-window">
+        <div class="chat-top"><div class="bot-avatar">✦</div><div><strong>Campus assistant</strong><small><span class="online-dot"></span> Ready to help</small></div><span class="chat-top-more">•••</span></div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite">
+          <div class="message bot-message"><span class="message-avatar">✦</span><div class="bubble"><small>Campus assistant</small><p>Hi there! 👋 Welcome to CampusConnect. What would you like to know about college?</p></div></div>
+          <div class="quick-prompts"><button data-question="What is the admission process?">Admissions</button><button data-question="What courses are available?">Courses</button><button data-question="Tell me about fees and scholarships.">Fees & scholarships</button><button data-question="What campus facilities are available?">Campus facilities</button></div>
+        </div>
+        <form id="chatForm" class="chat-input"><label class="sr-only" for="chatInput">Type your question</label><input id="chatInput" type="text" placeholder="Type your question here..." maxlength="500" autocomplete="off" required><button type="submit" aria-label="Send message">➤</button></form>
+        <p class="chat-disclaimer">Demo information only. Confirm official details with your college.</p>
+      </div>
+    </section>
+
+    <section class="section enquiry-section" id="enquiry">
+      <div class="section-heading"><div><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Submit an enquiry</h2></div><p>Leave your details and question. Your enquiry can be saved to the connected database.</p></div>
+      <div class="enquiry-layout">
+        <div class="enquiry-side"><div class="enquiry-symbol">✉</div><h3>Let's get you answers.</h3><p>Have a question that needs a personal response? Send an enquiry using the form. Use a valid email address so the college team can contact you.</p><div class="contact-detail"><span>✦</span><div><strong>Admissions support</strong><small>Ask about applications and eligibility</small></div></div><div class="contact-detail"><span>✦</span><div><strong>Student guidance</strong><small>Ask about courses and campus life</small></div></div></div>
+        <form id="enquiryForm" class="enquiry-form">
+          <div class="form-heading"><h3>Enquiry details</h3><p>Fields marked * are required.</p></div>
+          <div class="form-row"><div class="field"><label for="fullName">Full name *</label><input id="fullName" name="name" required maxlength="100" placeholder="Your full name"></div><div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" required maxlength="254" placeholder="you@example.com"></div></div>
+          <div class="form-row"><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" maxlength="20" placeholder="Optional"></div><div class="field"><label for="category">Enquiry topic *</label><select id="category" name="category" required><option value="">Choose a topic</option><option>Admissions</option><option>Courses</option><option>Fees & Scholarships</option><option>Campus Facilities</option><option>Other</option></select></div></div>
+          <div class="field"><label for="question">Your question *</label><textarea id="question" name="message" rows="4" required maxlength="2000" placeholder="Tell us what you'd like to know..."></textarea></div>
+          <button class="btn btn-primary submit-btn" type="submit">Send enquiry <span>↗</span></button>
+          <p id="enquiryStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><a class="brand footer-brand" href="#home"><span class="brand-mark">C</span><span>Campus<span class="brand-accent">Connect</span></span></a><p>A student-friendly college enquiry demo project.</p><span>Made for curious minds ✦</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
